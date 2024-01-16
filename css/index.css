@@ -116,8 +116,63 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-  background: url(../image/mainslide1.jpg) no-repeat center / cover;
+
   height: 100vh;
+}
+
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+}
+
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  width: 16px;
+  height: 16px;
+  text-indent: 9999px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: #fff;
+  border: 5px solid #000;
+}
+
+#section .slide1 {
+  background: url(../image/mainslide1.jpg) center / cover;
+}
+#section .slide2 {
+  background: url(../image/mainslide2.jpg) center / cover;
+}
+#section .slide3 {
+  background: url(../image/mainslide3.jpg) center / cover;
 }
 #section .slide .text {
   position: absolute;
@@ -128,18 +183,47 @@ img {
   text-align: center;
   color: #fff;
 }
-#section .slide .text p {
-  font-size: 20px;
-}
+
 #section .slide .text h2 {
   font-size: 50px;
   margin: 30px 0 50px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
 }
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 0.3s;
+}
+#section .slide .text p {
+  font-size: 20px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 1.3s;
+}
+
 #section .slide .text a {
+  display: inline-block;
   padding: 10px 16px;
   font-size: 18px;
   border: 2px solid #fff;
   border-radius: 3px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text a {
+  animation: fadeInUp 1s 1 both 2.3s;
+}
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  font-size: 20px;
+  margin-left: 50px;
+  color: #fff;
 }
 
 #section .ourcompany {
