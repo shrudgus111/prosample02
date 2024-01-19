@@ -1,0 +1,187 @@
+@media screen and (max-width: 1170px) {
+  .row {
+    max-width: 1170px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    border: 0px solid #000;
+    background: #fff;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  #header .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  /* #header .row {
+    padding: 0;
+  } */
+  #header h1 {
+    /* float: left; */
+    border: 0px solid #000;
+    padding: 20px 0;
+  }
+  #header .menuopen {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
+  #header #nav {
+    /* float: right; */
+    /* background: red; */
+    display: block;
+    width: 100%;
+  }
+  #header #nav .depth1 {
+    display: block;
+  }
+  #header #nav .depth1 > li {
+    /* float: left; */
+    font-size: 14px;
+    color: #000;
+    font-family: "Noto Sans KR";
+    font-weight: 900;
+    margin-left: 0px;
+    position: relative;
+    display: block;
+    align-items: center;
+  }
+
+  #header #nav .depth1 > li > a {
+    display: block;
+    height: auto;
+    line-height: 40px;
+    padding: 0 25px 0 15px;
+    position: relative;
+    border-top: 1px solid #d4d4d4;
+  }
+
+  #header #nav .depth1 > li:nth-child(1) > a::after,
+  #header #nav .depth1 > li:nth-child(4) > a::after {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-family: "FontAwesome";
+    font-size: 10px;
+    content: "\f107";
+    opacity: 0.3;
+  }
+
+  #header #nav .depth1 > li > a:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  #header #nav .depth1 > li:hover .depth2 {
+    display: block;
+  }
+
+  #header #nav .depth2 {
+    position: static;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    display: block;
+  }
+
+  #header #nav .depth2 > li > a {
+    display: block;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  #header #nav .depth2 > li > a:hover {
+    display: block;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  /* 슬라이더 텍스트  */
+
+  #section .slide {
+    position: relative;
+    /* background-image: url(../image/mainslide1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    height: 60vw;
+  }
+
+  #section .slideOuter .slide .text {
+    top: 50%;
+  }
+
+  #section .slideOuter .slide .text h2 {
+    font-size: 5vw;
+    margin: 30px 0 50px;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  #section .slideOuter .slide .text p {
+    font-size: 16px;
+  }
+
+  /* ourcompany  */
+
+  @media screen and (max-width: 760px) {
+    #section .ourcompany ul {
+      /* overflow: hidden; */
+      display: block;
+    }
+    #section .ourcompany ul li {
+      /* float: left;
+    
+      width: 33.33%; */
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    #section .product ul.best {
+      /* overflow: hidden; */
+      display: block;
+    }
+
+    #section .product ul.best li {
+      /* float: left;
+      width: 33.33%; */
+      flex: 1;
+      padding: 0 5px;
+      margin-bottom: 20px;
+    }
+
+    #section .companyinfo ul {
+      /* overflow: hidden; */
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #section .companyinfo ul.row li {
+      /* float: left;
+      width: 25%; */
+      flex: 0 1 50%;
+      padding: 20px 15px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  /* footer 구역 */
+  #footer span {
+    display: block;
+  }
+}

@@ -27,6 +27,7 @@
     />
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/rwdindex.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
       integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
@@ -41,12 +42,16 @@
   </head>
   <body>
     <div id="header">
-      <div class="row cf">
+      <div class="row">
         <h1>
           <a href="#">
             <img src="./image/logo.png" alt="smart store" />
           </a>
         </h1>
+        <div class="menuopen">
+          <span class="blind">메뉴열기</span>
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <div id="nav">
           <ul class="depth1">
             <li>
@@ -196,7 +201,18 @@
           <div class="slideInner2">
             <div class="slide2">
               <div class="text">
-                <h2>NOTICE</h2>
+                <h2>NOTICE1</h2>
+                <h3>창업 절차 및 조건에 대해 안내해드립니다.</h3>
+                <p>
+                  자세한 문의는 이메일로 접수해주시기 바랍니다. <br />
+                  tsalt@hanmail.net
+                </p>
+                <a href="#">공지사항 바로가기</a>
+              </div>
+            </div>
+            <div class="slide2">
+              <div class="text">
+                <h2>NOTICE2</h2>
                 <h3>창업 절차 및 조건에 대해 안내해드립니다.</h3>
                 <p>
                   자세한 문의는 이메일로 접수해주시기 바랍니다. <br />
@@ -336,6 +352,15 @@
           $(".slideInner").slick("slickPlay");
           $(this).removeClass("fa-play").addClass("fa-pause");
         }
+      });
+
+      $(".slideInner2").slick({
+        autoplay: true, // 슬라이더 자동재생
+        dots: true, // 번호버튼 표시여부
+        autoplaySpeed: 4000, // 자동재생 시간 간격(ms 단위생략) 3초
+        speed: 300, //슬라이드 진출입 속도 0.3초
+        arrows: false, // 이전, 다음 버튼 표시여부
+        fade: true,
       });
     </script>
   </body>
